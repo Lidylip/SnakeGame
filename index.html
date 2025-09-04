@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>复古贪吃蛇</title>
+    <meta name="description" content="复古像素风格的贪吃蛇小游戏，可调速度。" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <h1>复古贪吃蛇</h1>
+      <div class="scoreboard">
+        <div class="score">分数：<span id="score">0</span></div>
+        <div class="hiscore">最高分：<span id="hiscore">0</span></div>
+      </div>
+    </header>
+
+    <main class="game-layout">
+      <section class="game-panel">
+        <canvas id="game" width="640" height="640" aria-label="游戏画布" role="img"></canvas>
+        <div id="overlay" class="overlay hidden" aria-live="polite"></div>
+      </section>
+      <aside class="control-panel">
+        <div class="control-group">
+          <label for="speed">速度：<span id="speedLabel">中</span></label>
+          <input id="speed" type="range" min="1" max="10" step="1" value="5" />
+          <small class="hint">向右更快</small>
+        </div>
+        <div class="control-group buttons">
+          <button id="startPause" class="btn primary">开始</button>
+          <button id="reset" class="btn">重置</button>
+        </div>
+        <div class="control-group help">
+          <p>操作：</p>
+          <ul>
+            <li>方向键 / WASD 移动</li>
+            <li>空格键 开始/暂停</li>
+            <li>碰壁或撞到自己则游戏结束</li>
+          </ul>
+        </div>
+      </aside>
+    </main>
+
+    <footer class="site-footer">
+      <span>像素复古风 · 可调速度</span>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
